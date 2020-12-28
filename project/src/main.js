@@ -21,12 +21,14 @@ new Vue({
       {
         vendor: "bitcoin",
         color: "#ffaf37",
-        chip: "dark"
+        chip: "dark",
+        text: "#000"
       },
       {
         vendor: "ninja",
         color: "#404040",
-        chip: "light"
+        chip: "light",
+        text: "#f3f3f3"
       }
     ]
   }},

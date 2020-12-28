@@ -36,7 +36,8 @@ export default {
 
     cssVars(){ 
       return {
-        "--bg-color": this.cardStyle.color
+        "--bg-color": this.cardStyle.color,
+        "--text-color": this.cardStyle.text
       }
     }
   }
@@ -59,6 +60,7 @@ export default {
   h4, p{
     font-family: 'Courier New', Courier, monospace;
     text-shadow: -0.02rem -0.02rem rgb(200, 200, 200);
+    color: var(--text-color);
   }
   h4{
     font-weight: 400;
@@ -70,7 +72,7 @@ export default {
   }
   .holder-heading, .valid-heading{
     align-self: end;
-    color: rgb(68, 68, 68);
+    opacity: 0.8;
   }
   
   .chip-icon{
