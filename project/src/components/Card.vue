@@ -1,10 +1,12 @@
 <template>
-  <section class="card">
-      <img src="../assets/chip-dark.svg" 
+  <section class="card"
+    :style="cssVars"
+  >
+      <img :src='"../assets/chip-" + cardStyle.chip + ".svg"'
         alt="chip-icon" 
         class="chip-icon"
       >
-      <img src="../assets/vendor-bitcoin.svg" 
+      <img :src='"../assets/vendor-" + cardData.vendor + ".svg"'
         alt="vendor-icon" 
         class="vendor-icon"
       >
@@ -26,6 +28,16 @@ export default {
     cardNumber(){
       const cardNum = this.cardData.number
       return cardNum.match(/.{1,4}/g).join(' ')
+    },
+
+    cardStyle(){
+      return this.$root.styles.find(obj => obj.vendor == this.cardData.vendor)
+    },
+
+    cssVars(){ 
+      return {
+        "--bg-color": this.cardStyle.color
+      }
     }
   }
 }
@@ -33,22 +45,20 @@ export default {
 
 <style scoped>
   .card{
-    background-color: rgb(255, 175, 55);
+    background-color: var(--bg-color);
     border-radius: 1rem;
     width: 30rem;
 
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 2.6rem);
 
     padding: 1.2rem;
-
   }
 
   h4, p{
     font-family: 'Courier New', Courier, monospace;
-    text-shadow: -0.05rem -0.05rem rgb(200, 200, 200);
-
+    text-shadow: -0.02rem -0.02rem rgb(200, 200, 200);
   }
   h4{
     font-weight: 400;
@@ -60,6 +70,7 @@ export default {
   }
   .holder-heading, .valid-heading{
     align-self: end;
+    color: rgb(68, 68, 68);
   }
   
   .chip-icon{

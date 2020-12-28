@@ -11,9 +11,22 @@ new Vue({
         id: "432984728397",
         holder: "Thomas Wennhall",
         vendor: "bitcoin",
-        number: "1234567891011123",
+        number: "1234567891234567",
         validMonth: "12",
         validDay: "5"
+      }
+    ],
+
+    styles: [
+      {
+        vendor: "bitcoin",
+        color: "#ffaf37",
+        chip: "dark"
+      },
+      {
+        vendor: "ninja",
+        color: "#404040",
+        chip: "light"
       }
     ]
   }},

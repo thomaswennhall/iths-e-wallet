@@ -1,5 +1,5 @@
 <template>
-  <div class='home'>
+  <div class="home">
     <Top :heading='heading'/>
     <p>ACTIVE CARD</p>
     <Card :cardData='cardInfo[0]'
@@ -38,7 +38,7 @@ export default {
     justify-content: space-between;
   }
   .active-card{
-    box-shadow: 0 0.1rem 0.4rem 0 rgba(0, 0, 0, 0.466);
+    box-shadow: 0 0.1rem 0.4rem 0 rgba(0, 0, 0, 0.5);
   }
   p{
     font-size: 0.8rem;
