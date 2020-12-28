@@ -5,5 +5,12 @@
 </template>
 
 <style>
-
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  h1, h2, h3, p{
+    font-family: 'Open Sans', Verdana, sans-serif;
+  }
 </style>
