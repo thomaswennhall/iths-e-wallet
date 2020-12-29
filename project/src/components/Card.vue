@@ -84,7 +84,9 @@ export default {
     grid-column: 6;
 
     justify-self: end;
-    width: 2rem;
+    width: 2.2rem;
+
+    opacity: 0.8;
   }
   .number{
     grid-row: 3 / span 2;

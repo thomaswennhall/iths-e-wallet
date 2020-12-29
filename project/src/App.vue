@@ -13,4 +13,7 @@
   h1, h2, h3, p{
     font-family: 'Open Sans', Verdana, sans-serif;
   }
+  button{
+    font-family: 'Courier New', Courier, monospace;
+  }
 </style>
