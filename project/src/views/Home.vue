@@ -2,12 +2,14 @@
   <div class="home">
     <Top :heading='heading'/>
     <p>ACTIVE CARD</p>
-    <Card :cardData='cards[0]'
+    <Card :cardData='activeCard'
       class="active-card"
     />
-    <CardStack :cards='cards'/>
-    <router-link to="/addcard">
-      <button> ADD A NEW CARD </button>
+    <CardStack :cards='cards'
+      v-on:clicked-card='getCard'
+    />
+    <router-link to='/addcard'>
+      <button>ADD A NEW CARD</button>
     </router-link>
   </div>
 </template>
@@ -21,12 +23,19 @@ export default {
   components: { Top, Card, CardStack },
   
   data(){ return {
-    heading: 'E-WALLET'
+    heading: 'E-WALLET',
+    activeCard: this.$root.cards[0]
   }},
 
   computed: {
     cards(){
       return this.$root.cards
+    }
+  },
+
+  methods: {
+    getCard(clickedCard){
+      this.activeCard = clickedCard
     }
   }
 
@@ -40,6 +49,7 @@ export default {
     align-items: center;
     justify-content: space-between;
 
+    width: 30rem;
   }
   .active-card{
     box-shadow: 0 0.1rem 0.4rem 0 rgba(0, 0, 0, 0.5);

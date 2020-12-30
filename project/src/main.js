@@ -13,7 +13,7 @@ new Vue({
         vendor: "bitcoin",
         number: "1234567891234567",
         validMonth: "12",
-        validDay: "5"
+        validYear: "21"
       },
       {
         id: "986625663251",
@@ -21,23 +21,23 @@ new Vue({
         vendor: "ninja",
         number: "9876657588887665",
         validMonth: "10",
-        validDay: "23"
+        validYear: "23"
       },
       {
         id: "123456738291",
         holder: "Lucifer Morningstar",
         vendor: "evil",
         number: "6666666666666666",
-        validMonth: "6",
-        validDay: "6"
+        validMonth: "06",
+        validYear: "22"
       },
       {
         id: "878787846477",
         holder: "Morgan Lagerstad",
         vendor: "blockchain",
         number: "6837216988368787",
-        validMonth: "12",
-        validDay: "22"
+        validMonth: "11",
+        validYear: "22"
       }
     ],
 
@@ -65,6 +65,12 @@ new Vue({
         color: "#7500eb",
         chip: "light",
         text: "#f3f3f3" 
+      },
+      {
+        vendor: "",
+        color: "#e2e2e2",
+        chip: "dark",
+        text: "#111" 
       }
     ]
   }},

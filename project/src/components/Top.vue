@@ -14,7 +14,9 @@ export default {
 
 <style scoped>
   .top{
-    height: 15vh;
+    height: 20vh;
+    width: 50vw;
+    text-align: center;
 
     display: flex;
     justify-content: center;

@@ -4,6 +4,7 @@
         v-for="card in cards"
         :key="card.id"
         :cardData="card"
+        v-on:clicked="$emit('clicked-card', card)"
       />
   </div>
 </template>

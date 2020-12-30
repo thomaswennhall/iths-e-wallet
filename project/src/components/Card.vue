@@ -1,20 +1,19 @@
 <template>
-  <section class="card"
-    :style="cssVars"
-  >
+  <section class="card" :style="cssVars" v-on:click="$emit('clicked')">
       <img :src='"../assets/chip-" + cardStyle.chip + ".svg"'
         alt="chip-icon" 
         class="chip-icon"
       >
-      <img :src='"../assets/vendor-" + cardData.vendor + ".svg"'
+      <img v-if="cardData.vendor" 
+        :src='"../assets/vendor-" + cardData.vendor + ".svg"'
         alt="vendor-icon" 
         class="vendor-icon"
       >
-      <p class="number">{{ cardNumber }}</p>
+      <p class="number" v-if="cardData.number">{{ cardNumber }}</p>
       <h4 class="holder-heading">CARDHOLDER NAME</h4>
       <p class="holder">{{ cardData.holder }}</p>
       <h4 class="valid-heading">VALID THRU</h4>
-      <p class="valid-date">{{ cardData.validMonth }}/{{ cardData.validDay }} </p>
+      <p class="valid-date">{{ cardData.validMonth }}/{{ cardData.validYear }} </p>
   </section>
 </template>
 
@@ -48,7 +47,8 @@ export default {
   .card{
     background-color: var(--bg-color);
     border-radius: 1rem;
-    width: 30rem;
+    width: 100%;
+    height: 18rem;
 
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -102,7 +102,8 @@ export default {
   }
   .holder{
     grid-row: 6;
-    grid-column: span 4;
+    grid-column: span 5;
+    padding-right: 2rem;
   }
   .valid-heading{
     grid-row: 5;
