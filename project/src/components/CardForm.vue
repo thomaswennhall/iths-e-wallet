@@ -45,12 +45,17 @@
           <option value="evil">Evil Corp</option>
           <option value="ninja">Ninja Bank</option>
       </select>
-      <button type="submit">ADD CARD</button>
+      <ButtonBig class="submit-button" type="submit" :text="'ADD CARD'"/>
+      <!-- <button type="submit">ADD CARD</button> -->
   </form>
 </template>
 
 <script>
+import ButtonBig from './ButtonBig'
+
 export default {
+    components: { ButtonBig },
+
     props: {
         newCard: Object
     },
@@ -125,18 +130,8 @@ export default {
         grid-row: 8;
         grid-column: span 2;
     }
-    form > button{
+    .submit-button{
         grid-row: 10 / span 2;
         grid-column: span 2;
-
-        outline: none;
-        background-color: white;
-        border: solid 0.2rem black;
-        border-radius: 1rem;
-        padding: 1.6rem;
-        width: 30rem;
-
-        font-size: 1.8rem;
-        font-weight: 600;
     }
 </style>

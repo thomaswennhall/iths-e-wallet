@@ -8,8 +8,8 @@
     <CardStack :cards='cards'
       v-on:clicked-card='getCard'
     />
-    <router-link to='/addcard'>
-      <button>ADD A NEW CARD</button>
+    <router-link class="add-card-link" to='/addcard'>
+      <ButtonBig class="add-card-button" :text="buttonText"/>
     </router-link>
   </div>
 </template>
@@ -18,12 +18,14 @@
 import Top from '../components/Top'
 import Card from '../components/Card'
 import CardStack from '../components/CardStack'
+import ButtonBig from '../components/ButtonBig'
 
 export default {
-  components: { Top, Card, CardStack },
+  components: { Top, Card, CardStack, ButtonBig },
   
   data(){ return {
     heading: 'E-WALLET',
+    buttonText: 'ADD NEW CARD',
     activeCard: this.$root.cards[0]
   }},
 
@@ -61,18 +63,9 @@ export default {
     color: rgb(105, 105, 105);
     margin-bottom: 1rem;
   }
-  button{
-    outline: none;
-    background-color: white;
-    border: solid 0.2rem black;
-    border-radius: 1rem;
-    padding: 1.6rem;
-    width: 30rem;
-
-    font-size: 1.8rem;
-    font-weight: 600;
+  .add-card-link{
+    width: 100%;
 
     margin: 2rem;
-
   }
 </style>
