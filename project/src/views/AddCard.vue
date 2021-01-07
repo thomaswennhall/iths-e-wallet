@@ -42,7 +42,7 @@ export default {
     align-items: center;
     justify-content: space-between;
 
-    width: 30rem;
+    max-width: 30rem;
   }
   p{
     font-size: 0.8rem;

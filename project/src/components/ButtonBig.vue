@@ -13,14 +13,22 @@ export default {
 
 <style scoped>
     button{
-    outline: none;
-    background-color: white;
-    border: solid 0.2rem black;
-    border-radius: 1rem;
-    padding: 1.6rem;
-    width: 100%;
+      outline: none;
+      background-color: white;
+      border: solid 0.2rem black;
+      border-radius: 1rem;
+      padding: 1.6rem;
+      width: 100%;
 
-    font-size: 1.8rem;
-    font-weight: 600;
-  }
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    button:hover{
+      background-color: black;
+      color: white;
+    }
+    button:active{
+      background-color: pink;
+      color: black;
+    }
 </style>
