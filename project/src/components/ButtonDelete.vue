@@ -12,7 +12,7 @@ export default {
 <style scoped>
   button{
     padding: 0.4rem;
-    background-color:tomato;
+    background-color: tomato;
     border: solid 0.1rem black;
     border-radius: 0.3rem;
     outline: none;

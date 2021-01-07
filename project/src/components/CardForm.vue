@@ -45,8 +45,10 @@
           <option value="evil">Evil Corp</option>
           <option value="ninja">Ninja Bank</option>
       </select>
-      <ButtonBig class="submit-button" type="submit" :text="'ADD CARD'"/>
-      <!-- <button type="submit">ADD CARD</button> -->
+      <ButtonBig class="submit-button" 
+        type="submit" 
+        :text="'ADD CARD'"
+      />
   </form>
 </template>
 
@@ -62,6 +64,7 @@ export default {
 
     methods: {
         addCard(){
+            this.newCard.id = Date.now()
             this.$root.cards.push(this.newCard)
             this.$router.push('/')
         }

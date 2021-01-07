@@ -18,17 +18,10 @@ export default {
     props: {
         cardData: Object
     },
-
-    computed: {
-        cardNumber(){
-            const cardNum = this.cardData.number
-            return cardNum.match(/.{1,4}/g).join(' ')
-        }
-    },
-
+    
     methods: {
         deleteCard(){
-            const currentCard = this.$root.cards.find(obj => obj.number == this.cardData.number)
+            const currentCard = this.$root.cards.find(obj => obj.id == this.cardData.id)
             const currentCardIndex = this.$root.cards.indexOf(currentCard)
             this.$root.cards.splice(currentCardIndex, 1)
             this.$emit('button-click')
