@@ -11,7 +11,7 @@
       >
       <p class="number" v-if="cardData.number">{{ cardNumber }}</p>
       <h4 class="holder-heading">CARDHOLDER NAME</h4>
-      <p class="holder">{{ cardData.holder }}</p>
+      <p class="holder">{{ cardHolder }}</p>
       <h4 class="valid-heading">VALID THRU</h4>
       <p class="valid-date">{{ cardData.validMonth }}/{{ cardData.validYear }} </p>
   </section>
@@ -27,6 +27,15 @@ export default {
     cardNumber(){
       const cardNum = this.cardData.number
       return cardNum.match(/.{1,4}/g).join(' ')
+    },
+
+    cardHolder(){
+      const cardHold = this.cardData.holder
+      if(cardHold.length > 21){
+        const holderArr = cardHold.split(' ')
+        holderArr[0] = holderArr[0][0]
+        return holderArr.join(' ')
+      }else{ return cardHold }
     },
 
     cardStyle(){
