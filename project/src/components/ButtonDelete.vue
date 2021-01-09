@@ -2,13 +2,6 @@
   <button v-on:click="$emit('clicked-delete')">DELETE THIS CARD</button>
 </template>
 
-<script>
-export default {
-  
-
-}
-</script>
-
 <style scoped>
   button{
     padding: 0.4rem;

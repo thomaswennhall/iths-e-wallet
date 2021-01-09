@@ -58,6 +58,7 @@ export default {
     },
     showAlert(){
       this.showAlertBox = true
+      window.scrollTo({top: 0, behavior: 'smooth'})
       document.body.style.overflow = 'hidden'
     },
     hideAlert(){
@@ -100,8 +101,8 @@ export default {
     margin: 2rem;
   }
   .alert-box{
-    position: fixed;
-    top: 15rem;
+    position: relative;
+    bottom: 17rem;
     z-index: 1;
   }
 </style>

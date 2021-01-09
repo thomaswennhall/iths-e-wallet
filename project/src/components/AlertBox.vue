@@ -35,7 +35,7 @@ export default {
         max-width: 25rem;
         height: 12rem;
         padding: 1rem;
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.8);
         color: white;
         border-radius: 1rem;
         box-shadow: 0 0.1rem 0.8rem 0.2rem rgba(0, 0, 0, 0.5);
