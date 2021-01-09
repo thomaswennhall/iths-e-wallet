@@ -24,7 +24,7 @@ export default {
             const currentCard = this.$root.cards.find(obj => obj.id == this.cardData.id)
             const currentCardIndex = this.$root.cards.indexOf(currentCard)
             this.$root.cards.splice(currentCardIndex, 1)
-            this.$emit('button-click')
+            this.$emit('delete-click')
         }
     }
 }

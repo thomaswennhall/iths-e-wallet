@@ -1,18 +1,12 @@
 <template>
   <section class="no-cards">
       <h3>Your e-wallet is empty</h3>
-      <p>When it's not your cards will show here, 
+      <p>When it's not, your cards will show here, 
           go ahead and add your first card
           by tapping the button below.
       </p>
   </section>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style scoped>
     .no-cards{
@@ -27,6 +21,7 @@ export default {
     }
     p{
         text-align: center;
+        width: 80%;
     }
 
 </style>

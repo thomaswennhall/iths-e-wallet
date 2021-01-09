@@ -15,6 +15,7 @@
       v-if='showAlertBox'
       :cardData="activeCard"
       v-on:button-click="hideAlert"
+      v-on:delete-click="resetActiveCard"
     />
     <CardStack v-if='cards.length > 1'
       :cards='cards'
@@ -63,8 +64,11 @@ export default {
     },
     hideAlert(){
       this.showAlertBox = false
-      this.activeCard = this.$root.cards[0]
       document.body.style.overflow = null
+    },
+    resetActiveCard(){
+      this.hideAlert()
+      this.activeCard = this.$root.cards[0]
     }
   }
 
