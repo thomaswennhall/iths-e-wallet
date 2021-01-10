@@ -23,5 +23,4 @@
         text-align: center;
         width: 80%;
     }
-
 </style>
