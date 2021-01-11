@@ -16,14 +16,6 @@ new Vue({
         validYear: "21"
       },
       {
-        id: "986625663251",
-        holder: "Bumbi Bambadoo",
-        vendor: "ninja",
-        number: "9876657588887665",
-        validMonth: "10",
-        validYear: "23"
-      },
-      {
         id: "123456738291",
         holder: "Lucifer Morningstar",
         vendor: "evil",
