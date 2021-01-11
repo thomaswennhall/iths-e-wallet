@@ -1,5 +1,3 @@
 .DS_Store
-project/vue.config.js
-project/deploy.sh
-project/package.json
-project/vue.config.js
+node_modules
+build
