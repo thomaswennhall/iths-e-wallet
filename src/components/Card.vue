@@ -10,7 +10,7 @@
         class="vendor-icon"
       >
       <p class="number" v-if="cardData.number">{{ cardNumber }}</p>
-      <h4 class="holder-heading">CARDHOLDER NAME</h4>
+      <h4 class="holder-heading">CARDHOLDER</h4>
       <p class="holder">{{ cardHolder }}</p>
       <h4 class="valid-heading">VALID THRU</h4>
       <p class="valid-date">{{ cardData.validMonth }}/{{ cardData.validYear }} </p>
@@ -57,11 +57,11 @@ export default {
     background-color: var(--bg-color);
     border-radius: 1rem;
     width: 100%;
-    height: 18rem;
+    max-height: 18rem;
 
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 2.6rem);
+    grid-template-rows: repeat(6, 1fr);
 
     padding: 1.2rem;
   }
@@ -93,7 +93,7 @@ export default {
     grid-column: 6;
 
     justify-self: end;
-    width: 2.2rem;
+    max-width: 2.2rem;
 
     opacity: 0.8;
   }
@@ -103,7 +103,7 @@ export default {
 
     align-self: center;
 
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
   .holder-heading{
     grid-row: 5;
@@ -125,5 +125,27 @@ export default {
     grid-column: 6;
 
     justify-self: end;
+  }
+
+  @media screen and (max-width: 450px){
+    .card{
+      height: 14rem;
+    }
+    
+    .valid-heading, .holder-heading{
+      font-size: 0.8rem;
+    }
+    .holder, .valid-date{
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .number{
+      font-size: 1.57rem;
+    }
+
+    .chip-icon{
+      width: 2.4rem;
+    }
   }
 </style>

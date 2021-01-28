@@ -25,7 +25,7 @@ new Vue({
       },
       {
         id: "878787846477",
-        holder: "Morgan Lagerstad",
+        holder: "Morgan Pålsson",
         vendor: "blockchain",
         number: "6837216988368787",
         validMonth: "11",

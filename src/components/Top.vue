@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
   .top{
-    height: 20vh;
+    height: 16vh;
     width: 50vw;
     text-align: center;
 
