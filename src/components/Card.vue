@@ -1,9 +1,16 @@
 <template>
-  <section class="card" :style="cssVars" v-on:click="$emit('clicked')">
-      <img :src='"../assets/chip-" + cardStyle.chip + ".svg"'
+  <section class="card" :class="cardData.vendor" v-on:click="$emit('clicked')">
+      <img v-if="cardData.vendor == 'blockchain'" 
+        :src='"../assets/chip-dark.svg"'
         alt="chip-icon" 
         class="chip-icon"
       >
+      <img v-else 
+        :src='"../assets/chip-light.svg"'
+        alt="chip-icon" 
+        class="chip-icon"
+      >
+      
       <img v-if="cardData.vendor" 
         :src='"../assets/vendor-" + cardData.vendor + ".svg"'
         alt="vendor-icon" 
@@ -36,17 +43,6 @@ export default {
         holderArr[0] = holderArr[0][0]
         return holderArr.join(' ')
       }else{ return cardHold }
-    },
-
-    cardStyle(){
-      return this.$root.styles.find(obj => obj.vendor == this.cardData.vendor)
-    },
-
-    cssVars(){ 
-      return {
-        "--bg-color": this.cardStyle.color,
-        "--text-color": this.cardStyle.text
-      }
     }
   }
 }
@@ -54,7 +50,8 @@ export default {
 
 <style scoped>
   .card{
-    background-color: var(--bg-color);
+    background-color: #e2e2e2;
+    color: #111;
     border-radius: 1rem;
     width: 100%;
     max-height: 18rem;
@@ -65,11 +62,26 @@ export default {
 
     padding: 1.2rem;
   }
+  .bitcoin{
+    background-color: #ffaf37;
+    color: #000;
+  }
+  .ninja{
+    background-color: #404040;
+    color: #f3f3f3;
+  }
+  .evil{
+    background-color: #ed0e3b;
+    color: #f3f3f3;
+  }
+  .blockchain{
+    background-color: #7500eb;
+    color: #f3f3f3;
+  }
 
   h4, p{
     font-family: 'Courier New', Courier, monospace;
     text-shadow: -0.02rem -0.02rem rgb(200, 200, 200);
-    color: var(--text-color);
   }
   h4{
     font-weight: 400;
