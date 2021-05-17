@@ -31,39 +31,6 @@ new Vue({
         validMonth: "11",
         validYear: "22"
       }
-    ],
-
-    styles: [
-      {
-        vendor: "bitcoin",
-        color: "#ffaf37",
-        chip: "dark",
-        text: "#000"
-      },
-      {
-        vendor: "ninja",
-        color: "#404040",
-        chip: "light",
-        text: "#f3f3f3"
-      },
-      {
-        vendor: "evil",
-        color: "#ed0e3b",
-        chip: "light",
-        text: "#f3f3f3" 
-      },
-      {
-        vendor: "blockchain",
-        color: "#7500eb",
-        chip: "light",
-        text: "#f3f3f3" 
-      },
-      {
-        vendor: "",
-        color: "#e2e2e2",
-        chip: "dark",
-        text: "#111" 
-      }
     ]
   }},
 
